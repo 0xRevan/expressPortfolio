@@ -15,7 +15,7 @@ body {
 /* Frame container */
 .frame-container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
@@ -25,6 +25,7 @@ body {
 /* Frame image */
 .frame-image {
     width: 100%;
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -32,7 +33,9 @@ body {
 /* Buttons container */
 .buttons-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    gap: 10px; /* Ensure buttons don't touch on smaller screens */
 }
 
 /* Frame button */
@@ -45,8 +48,12 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    flex-grow: 1; /* Ensure buttons fill the container evenly */
 }
 
-.frame-button:hover {
+.frame-button:hover,
+.frame-button:focus { /* Add focus for accessibility */
     background-color: #0056b3;
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 91, 179, 0.5); /* Custom focus indicator */
 }
