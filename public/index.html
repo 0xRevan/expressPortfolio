@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Services Frame</title>
+    <!-- Include necessary frame meta tags -->
+    <meta property="fc:frame" content="vNext" />
+    <!-- Define frame properties -->
+    <meta property="fc:frame:image" content="YOUR_IMAGE_URL_HERE" />
+    <!-- Define button labels and actions -->
+    <meta property="fc:frame:button:1" content="Service 1" />
+    <meta property="fc:frame:button:1:action" content="link" />
+    <meta property="fc:frame:button:1:target" content="/service1.html" /> <!-- Update with the correct relative path -->
+    <meta property="fc:frame:button:2" content="Service 2" />
+    <meta property="fc:frame:button:2:action" content="link" />
+    <meta property="fc:frame:button:2:target" content="/service2.html" /> <!-- Update with the correct relative path -->
+    <!-- Add CSS for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="frame-container">
+        <!-- Render Frame Metadata -->
+        <FrameMetadata
+            buttons={[
+                {
+                    label: 'Button 1',
+                },
+                {
+                    action: 'link',
+                    label: 'Link to Google',
+                    target: 'https://www.google.com'
+                },
+                {
+                    action: 'post_redirect',
+                    label: 'Redirect to cute pictures',
+                },
+            ]}
+            image={{
+                src: 'https://your-service.com/your-image.png',
+                aspectRatio: '1:1' // Adjust aspect ratio as per your image
+            }}
+            input={{
+                text: 'Enter your message here',
+            }}
+            postUrl="https://your-service.com/api/frame"
+        />
+    </div>
+    <script src="https://unpkg.com/@coinbase/onchainkit"></script> <!-- Include OnchainKit script -->
+</body>
+
+<!-- Frame content goes here -->
+<div class="frame-container">
+    <!-- Frame image -->
+    <img src="./revanSunwallpaper.png" alt="Frame Image" class="frame-image">
+    <!-- Buttons -->
+    <div class="buttons-container">
+        <button class="frame-button" onclick="window.location.href='/whyChooseMe.html'">About Me</button>
+        <button class="frame-button" onclick="window.location.href='/contactMe.html'">Contact Me</button>
+        <button class="frame-button" onclick="window.location.href='/payments.html'">Payment Terms</button>
+
+    </div>
+</div>
+
+<!-- JavaScript for button redirection -->
+<script>
+    // Function to redirect to the specified service URL
+    function redirectToService(url) {
+        window.location.href = url;
+    }
+</script>
+</html>

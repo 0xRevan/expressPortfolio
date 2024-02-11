@@ -1,0 +1,87 @@
+/* style.css */
+
+/* Resetting default browser styles */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fceeea;
+    color: #1d3557; /* Dark blue text color */
+    padding: 20px; /* Added padding for body content */
+}
+
+/* Heading styles */
+h1 {
+    font-size: 2.5rem; /* 40px */
+    color: #d62828; /* Reddish color for headings */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem; /* 32px */
+    color: #1d3557; /* Dark blue color for subheadings */
+    margin-bottom: 0.5rem;
+}
+
+/* Paragraph styles */
+p {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.5; /* Improved readability with increased line-height */
+    margin-bottom: 1rem;
+}
+
+/* Container for additional content */
+aside {
+    background-color: #f0efeb;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #1d3557;
+    border-radius: 10px;
+}
+
+/* Styling for links */
+a {
+    color: #009688; /* Green color for links */
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition for link color change */
+}
+
+a:hover {
+    color: #d62828; /* Reddish color on hover */
+}
+
+/* Styling for lists */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 1rem; /* Improved spacing between lists */
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    padding: 0.75rem; /* Improved spacing for table cells */
+    border: 1px solid #1d3557; /* Dark blue border for table cells */
+}
+
+th {
+    background-color: #f0efeb; /* Light grey background for table headers */
+    font-weight: bold; /* Bold font weight for table headers */
+    text-align: left;
+}
+
+/* Responsive styling for tables */
+@media (max-width: 768px) {
+    table {
+        overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+    }
+}
